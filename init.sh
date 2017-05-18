@@ -1,11 +1,12 @@
 #!/bin/bash
 echo "what will the grump be called?"
 read grumpName
+echo "Briefly describe the grump's function"
+read grumpDescription
 echo "creating a folder called ${grumpName} for the grump"
 mkdir -p ${grumpName} && cd $_;
 echo "creating a grump.json"
 cat >grump.json <<EOL
-
 {
   "defaultCommand": "${grumpName}",
   "commands": {
@@ -16,6 +17,23 @@ cat >grump.json <<EOL
     }
   }
 }
+EOL
+
+cat >README.md <<EOL
+# ${grumpName}
+${grumpDescription}
+
+If grump has not yet been installed, you can do so using:
+```bash
+npm i -g grump
+```
+
+Example usage:
+```
+grump ${grumpDescription}
+```
+
+see [grumpJS.com](https://grumpjs.com) to find other useful grumps!
 EOL
 echo "creating ${grumpName} shell file"
 echo "#!/bin/bash" > ${grumpName}.sh
