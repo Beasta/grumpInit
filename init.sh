@@ -1,6 +1,8 @@
 #!/bin/bash
-echo "what will the grump be called"
+echo "what will the grump be called?"
 read grumpName
+echo "creating a folder called ${grumpName} for the grump"
+mkdir -p ${grumpName} && cd $_;
 echo "creating a grump.json"
 cat >grump.json <<EOL
 
