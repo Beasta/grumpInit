@@ -1,6 +1,10 @@
 #!/bin/bash
 echo "what will the grump be called?"
 read grumpName
+if [ -d "${grumpName}" ]; then
+    echo "there is a already a directory with that name"
+    exit 1
+fi
 echo "Briefly describe the grump's function"
 read grumpDescription
 echo "creating a folder called ${grumpName} for the grump"
