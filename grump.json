@@ -1,0 +1,11 @@
+
+{
+  "defaultCommand": "init",
+  "commands": {
+    "init": {
+      "scriptType": "bash",
+      "scriptPath": init.sh",
+      "vars": {}
+    }
+  }
+}
