@@ -18,20 +18,21 @@ cat >grump.json <<EOL
   }
 }
 EOL
-
+echo "creating a readme"
 cat >README.md <<EOL
+
 # ${grumpName}
 ${grumpDescription}
 
 If grump has not yet been installed, you can do so using:
-```bash
+\`\`\`bash
 npm i -g grump
-```
+\`\`\`
 
 Example usage:
-```
+\`\`\`
 grump ${grumpDescription}
-```
+\`\`\`
 
 see [grumpJS.com](https://grumpjs.com) to find other useful grumps!
 EOL
