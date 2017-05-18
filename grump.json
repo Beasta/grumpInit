@@ -4,7 +4,7 @@
   "commands": {
     "init": {
       "scriptType": "bash",
-      "scriptPath": init.sh",
+      "scriptPath": "init.sh",
       "vars": {}
     }
   }
