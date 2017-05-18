@@ -9,7 +9,7 @@ cat >grump.json <<EOL
   "commands": {
     "${grumpName}": {
       "scriptType": "bash",
-      "scriptPath": ${grumpName}.sh",
+      "scriptPath": "${grumpName}.sh",
       "vars": {}
     }
   }
@@ -17,4 +17,5 @@ cat >grump.json <<EOL
 EOL
 echo "creating ${grumpName} shell file"
 echo "#!/bin/bash" > ${grumpName}.sh
-git int
+git init
+
